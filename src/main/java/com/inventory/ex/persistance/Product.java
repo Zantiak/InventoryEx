@@ -1,16 +1,14 @@
 package com.inventory.ex.persistance;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.List;
 
 /**
  * Entity class for the PRODUCT table.
  */
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name="PRODUCT")
 public class Product {

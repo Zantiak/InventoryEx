@@ -25,7 +25,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
      */
     @Query("SELECT p FROM Product p JOIN FETCH p.prices pr " +
             "WHERE p.productId = :productId AND p.brandId = :brandId AND :date BETWEEN pr.startDate AND pr.endDate")
-    Optional<Product> findByProductIdBrandIdAndPriceDate(@Param("productId") int productId,
+    Optional<Product> findByProductIdBrandIdAndPriceDate(@Param("productId") long productId,
                                                          @Param("brandId") int brandId, @Param("date") Timestamp date);
 
 }

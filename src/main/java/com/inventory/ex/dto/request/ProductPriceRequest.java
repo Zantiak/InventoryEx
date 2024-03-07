@@ -15,7 +15,7 @@ public class ProductPriceRequest {
      * Product code identifier.
      */
     @NotNull
-    private int productId;
+    private long productId;
 
     /**
      * Product brand identifier.

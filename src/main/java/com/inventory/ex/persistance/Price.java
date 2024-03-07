@@ -1,16 +1,14 @@
 package com.inventory.ex.persistance;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.sql.Timestamp;
 
 /**
  * Entity class for PRICE table.
  */
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name="PRICE")
 public class Price {
@@ -58,7 +56,7 @@ public class Price {
      * Product code identifier.
      */
     @ManyToOne
-    @JoinColumn(name = "PRODUCT_ID")
+    @JoinColumn(name = "PRODUCT_ID", nullable = false)
     private Product product;
 
 }
